@@ -160,3 +160,251 @@ body {
     transform: translate3d(0, -16px, 0);
   }
 } 
+
+
+/* gear loader */
+.loader {
+  height: 100%;
+  margin: auto;
+  width: 400px;
+  position: relative;
+}
+
+.loader_cogs {
+  width: 250px;
+  height: 250px;
+  top: 70px !important;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+}
+
+.gear{
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  -moz-box-shadow: 0px -1px 0px 0px #fff, 0px 1px 0px 0px black;
+  -webkit-box-shadow: 0px -1px 0px 0px #fff, 0px 1px 0px 0px black;
+  box-shadow: 0px -1px 0px 0px #fff, 0px 1px 0px 0px black;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+}
+
+.gear.large{
+  height: 120px;
+  width: 120px;
+  -moz-border-radius: 60px;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  top: 15px;
+  left: 15px;
+}
+
+.gear.medium{
+  top: 125px;
+  left: 113px;
+}
+
+.large .gearinner{
+  -moz-border-radius: 60px;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  background: #b30000;
+}
+
+.large .gearinner .gearbar{
+  margin-left: -68px;
+  width: 136px;
+  background: #b30000;
+}
+
+.medium .gearinner{
+  background: #ff4d4d;
+}
+
+.medium .gearinner .gearbar{
+  background: #ff4d4d;
+}
+
+.gear.one .gearinner {
+  -webkit-animation: counter-clockwise 6s infinite linear;
+  -moz-animation: counter-clockwise 6s infinite linear;
+}
+
+.gear.two .gearinner {
+  -webkit-animation: clockwise 3s infinite linear;
+  -moz-animation: clockwise 3s infinite linear;
+}
+
+.gear:after{
+  content: "";
+  position: absolute;
+  height: 36px;
+  width: 36px;
+  -moz-border-radius: 36px;
+  -webkit-border-radius: 36px;
+  border-radius: 36px;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  margin-left: -18px;
+  margin-top: -18px;
+  z-index: 3;
+  -moz-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1), inset 0px 0px 10px rgba(0, 0, 0, 0.1), inset 0px 2px 0px 0px #fff, inset 0px -1px 0px 0px #fff;
+  -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1), inset 0px 0px 10px rgba(0, 0, 0, 0.1), inset 0px 2px 0px 0px #fff, inset 0px -1px 0px 0px #fff;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1), inset 0px 0px 10px rgba(0, 0, 0, 0.1), inset 0px 2px 0px 0px #fff, inset 0px -1px 0px 0px #fff;
+}
+
+.gear.large:after {
+  height: 96px;
+  width: 96px;
+  -moz-border-radius: 48px;
+  -webkit-border-radius: 48px;
+  border-radius: 48px;
+  margin-left: -48px;
+  margin-top: -48px;
+}
+
+.gearinner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: #555;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gearinner .gearbar {
+  height: 16px;
+  width: 76px;
+  position: absolute;
+  left: 50%;
+  margin-left: -38px;
+  top: 50%;
+  margin-top: -8px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gearinner .gearbar:nth-child(2) {
+  -moz-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+
+.gearinner .gearbar:nth-child(3) {
+  -moz-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+
+.gearinner .gearbar:nth-child(4) {
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.gearinner .gearbar:nth-child(5) {
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.gearinner .gearbar:nth-child(6) {
+  -moz-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  -webkit-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+
+ 
+/* Animations */
+@-webkit-keyframes clockwise {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes clockwise {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes counter-clockwise {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+@-moz-keyframes counter-clockwise {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+/* */
+
+/* multiple circle loader */
+.circle-loader{position: relative; top: 200px;}
+.circle-loader-large{position: absolute; top: calc(50% - 100px); left: calc(50% - 100px); width: 200px; height: 200px; border: 0px solid transparent; border-bottom: 4px solid #b30000; border-radius: 50%; animation: animate 3s linear infinite;}
+.circle-loader-large:before{content: ''; position: absolute; top: 10px; left: 10px; right: 10px; bottom: 10px; border: 0px solid transparent; border-bottom: 4px solid #ff4d4d; border-radius: 50%; animation: animate 2s linear infinite;}
+.circle-loader-large:after{content: '';  position: absolute; top: 22px; left: 22px; right: 22px; bottom: 22px; border: 0px solid transparent; border-bottom: 4px solid #b30000; border-radius: 50%; animation: animate 1s linear infinite;}
+
+@keyframes animate{
+  0%
+  {
+    transform: rotate(0deg);
+  }
+  100%
+  {
+   transform: rotate(360deg); 
+  }
+}
+/* */
+
